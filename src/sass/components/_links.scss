@@ -20,8 +20,8 @@ a:hover {
 
 a[target="_blank"]:after {
     background-color: $orange;
-    -webkit-mask-image: url(/img/external-link-icon.svg);
-    mask-image: url(/img/external-link-icon.svg);
+    -webkit-mask-image: url(/public/img/external-link-icon.svg);
+    mask-image: url(/public/img/external-link-icon.svg);
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     // content: url(/img/external-link-icon.svg);
