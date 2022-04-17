@@ -1,6 +1,6 @@
 {% set pictureURL = resume.profilePicture.data.attributes.url %}
 
-<img class="profile-picture" src="{{ env.CMS_URL }}{{ pictureURL }}" alt="">
+<img class="profile-picture" src="{{ pictureURL }}" alt="">
 <div>
     <h1>
         <small>{{ resume.header.greeting }}</small><br>

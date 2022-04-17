@@ -6,6 +6,9 @@
 
 footer {
     // background-color: lighten($gray, 45%);
+    .container {
+        padding-bottom: 1.2rem;
+    }
 
     .flex {
         display: flex;
@@ -49,10 +52,10 @@ footer {
 
     .last-updated {
         display: block;
-        margin-top: 1rem;
-        text-align: end;
+        margin-top: 1.2rem;
+        text-align: center;
         font-size: .7em;
-        color: $gray;
+        color: lighten($gray, 15%);
         // font-style: italic;
     }
 

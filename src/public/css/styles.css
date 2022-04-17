@@ -302,8 +302,8 @@ a:hover {
 
 a[target=_blank]:after {
   background-color: #fb982f;
-  -webkit-mask-image: url(/img/external-link-icon.svg);
-  mask-image: url(/img/external-link-icon.svg);
+  -webkit-mask-image: url(/public/img/external-link-icon.svg);
+  mask-image: url(/public/img/external-link-icon.svg);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   content: "Opens link in a new window";
@@ -735,7 +735,6 @@ section#about .facts > ul label {
 }
 #resume .education-section .education-timeline {
   flex: 0 1 15%;
-  height: fit-content;
 }
 #resume .education-section .education-timeline svg {
   width: 100%;
@@ -786,10 +785,18 @@ section#about .facts > ul label {
     padding-left: 0;
   }
   #resume .experience-body, #resume .education-body {
-    flex: 1 0 75% !important;
+    flex: 1 1 85% !important;
   }
   #resume .experience-timeline, #resume .education-timeline {
-    flex: 0 1 25% !important;
+    flex: 1 1 15% !important;
+  }
+}
+@media screen and (max-width: 908px) {
+  #resume .experience-body, #resume .education-body {
+    flex: 1 1 85% !important;
+  }
+  #resume .experience-timeline, #resume .education-timeline {
+    flex: 1 1 15% !important;
   }
 }
 #skills {
@@ -818,7 +825,7 @@ section#about .facts > ul label {
 #skills .keywords-title {
   color: #fba448;
   text-align: left;
-  margin-top: 18px;
+  margin-top: 0.9rem;
   margin-bottom: 6px;
   font-weight: bold;
   font-size: 0.9em;
@@ -937,6 +944,9 @@ section#about .facts > ul label {
   color: #979dad;
 }
 
+footer .container {
+  padding-bottom: 1.2rem;
+}
 footer .flex {
   display: flex;
   justify-content: space-between;
@@ -967,10 +977,10 @@ footer .social-links i {
 }
 footer .last-updated {
   display: block;
-  margin-top: 1rem;
-  text-align: end;
+  margin-top: 1.2rem;
+  text-align: center;
   font-size: 0.7em;
-  color: #6d758b;
+  color: #979dad;
 }
 footer svg {
   fill: white;

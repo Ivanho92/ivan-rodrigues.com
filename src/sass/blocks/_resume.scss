@@ -118,7 +118,6 @@
 
         .education-timeline {
             flex: 0 1 15%;
-            height: fit-content;
 
             svg {
                 width: 100%;
@@ -188,11 +187,26 @@
 
 
         .experience-body, .education-body {
-            flex: 1 0 75% !important;
+            flex: 1 1 85% !important;
         }
 
         .experience-timeline, .education-timeline {
-            flex: 0 1 25% !important;
+            flex: 1 1 15% !important;
+            // display: none;
+        }
+    }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+    #resume {
+        .experience-body, .education-body {
+            flex: 1 1 85% !important;
+        }
+
+        .experience-timeline, .education-timeline {
+            flex: 1 1 15% !important;
+            // z-index: 5;
+            // display: none;
         }
     }
 }

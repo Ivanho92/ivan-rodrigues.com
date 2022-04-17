@@ -2,7 +2,7 @@
     <h2 class="heading">Portfolio</h2>
     <div class="portfolio-projects">
         {% for project in portfolio %}
-            {% set thumbnailURL = env.CMS_URL ~ project.thumbnail.data.attributes.formats.small.url if project.thumbnail.data.attributes.formats.small.url else undefined %}
+            {% set thumbnailURL = project.thumbnail.data.attributes.formats.small.url %}
 
             <div class="portfolio-project">
                     {% if thumbnailURL %}

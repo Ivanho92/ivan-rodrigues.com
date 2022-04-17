@@ -40,7 +40,7 @@ module.exports = (config) => {
     });
 
     // Pass throughs (js, favicon, ...)
-    config.addPassthroughCopy("./src/public/css/styles.css");
+    config.addPassthroughCopy("./src/public/css");
     config.addPassthroughCopy("./src/public/js");
     config.addPassthroughCopy("./src/public/favicon.png");
     config.addPassthroughCopy("./src/public/img");
