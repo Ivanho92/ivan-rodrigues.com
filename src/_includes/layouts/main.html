@@ -1,0 +1,37 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+{% include "blocks/nav.html" %}
+
+<hr class="visual-aid">
+
+<main id="main">
+    <header id="top" scroll-spy>
+        {% include "blocks/header.html" %}
+    </header>
+    <section id="about" scroll-spy>
+        {% include "blocks/about.html" %}
+    </section>
+    <section id="resume" scroll-spy>
+        {% include "blocks/resume.html" %}
+    </section>
+    <section id="skills" scroll-spy>
+        {% include "blocks/skills.html" %}
+    </section>
+    <section id="portfolio" scroll-spy>
+        {% include "blocks/portfolio.html" %}
+    </section>
+    <section id="contact" scroll-spy>
+        {% include "blocks/contact.html" %}
+    </section>
+    <footer id="footer">
+        {% include "blocks/footer.html" %}
+    </footer>
+</main>
+
+<span id="scroll">
+    <span></span>
+</span>
+
+{% endblock %}

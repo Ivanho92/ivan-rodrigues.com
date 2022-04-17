@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="skills-section">
+        <h2 class="heading">Skills</h2>
+        <div class="skills">
+            {% for skill in skills %}
+                <div class="skill">
+                    <p class="skill-category">{{ skill.category }}</p>
+                    <p class="skill-description">{{ skill.description | safe }}</p>
+                    <p class="keywords-title">Keywords</p>
+                    <ul class="keywords-list">
+                        {% for keyword in skill.keywords %}
+                            <li>{{ keyword }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,32 @@
+{% extends "layouts/base.html" %}
+
+{% block meta %}
+    <title>Project {{ project.title }} | Ivan Rodrigues - Resume/Portfolio</title>
+    <meta name="description" content="{{ project.metaDescription }}">
+{% endblock %}
+
+{% block content %}
+
+{% include "blocks/nav.html" %}
+
+<main id="main" class="project-page">
+    <div class="container">
+        <button class="btn" id="go-back">Back to resume</button>
+        <p class="heading">{{ project.title }}</p>
+        <div class="period">
+            <span class="start_year">{{ project.startDate | date('MMM YYYY') }}</span> -
+            <span class="end_year">{{ project.endDate | date('MMM YYYY') }}</span>
+        </div>
+        <div class="project-body">
+            {{ content | safe }}
+        </div>
+    </div>
+
+    <footer id="footer">
+        {% include "blocks/footer.html" %}
+    </footer>
+</main>
+
+
+
+{% endblock %}

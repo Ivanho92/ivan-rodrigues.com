@@ -1,0 +1,71 @@
+<div class="container">
+    <div class="experiences-section">
+        <h2 class="heading">Work experience</h2>
+        <div class="experiences">
+            {% for experience in experiences %}
+                <div class="experience">
+                    <div class="experience-timeline">
+                        <svg>
+                            <circle cx="25" cy="25" r="15" fill="transparent" />
+                            <line x1="25" y1="50" x2="25" y2="100%" />
+                        </svg> 
+                    </div>
+                    <div class="experience-body">
+                        <p class="employer">{{ experience.employer }}</p>
+                        <p class="position">{{ experience.title }}</p>
+                        <div class="period">
+                            <span class="start_year">{{ experience.startDate | date('MMM YYYY') }}</span> -
+                            {% if experience.endDate %}
+                                <span class="end_year">{{ experience.endDate | date('MMM YYYY') }}</span>
+                            {% else %}
+                                <span class="end_year">Current</span>
+                            {% endif %}
+                        </div>
+                        <div class="description">{{ experience.description | markdown | safe }}</div>
+
+                        {% if experience.projects | length %}
+                            <p class="projects-title">Projects</p>
+                            <ul class="projects">
+                                {% for project in experience.projects %}
+                                    <li><a href="/projects/{{ project.slug }}">{{ project.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <hr class="resume-separator">
+
+    <div class="education-section">
+        <h2 class="heading">Education</h2>
+        <div class="educations">
+            {% for education in resume.education %}
+                <div class="education">
+                    <div class="education-timeline">
+                        <svg>
+                            <circle cx="25" cy="25" r="15" fill="transparent" />
+                            <line x1="25" y1="50" x2="25" y2="100%" />
+                        </svg> 
+                    </div>
+                    <div class="education-body">
+                        <p class="school">{{ education.school }}</p>
+                        <p class="title">{{ education.title }} <span class="degree">- {{ education.degree }}</span></p>
+                        <div class="period">
+                            <span class="start_year">{{ education.startDate | date('MMM YYYY') }}</span> -
+                            {% if education.endDate %}
+                                <span class="end_year">{{ education.endDate | date('MMM YYYY') }}</span>
+                            {% else %}
+                                <span class="end_year">Current</span>
+                            {% endif %}
+                        </div>
+                        <p class="position">{{ education.position }}</p>
+                        <p class="description">{{ education.description }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

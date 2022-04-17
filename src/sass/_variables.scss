@@ -1,0 +1,32 @@
+$breakpoint-mobile: 908px;
+$main-offset-mobile: 0;
+$body-offset-mobile: ($main-offset-mobile - 234px);
+$scroll-offset-desktop: 0;
+$scroll-offset-mobile: 35px;
+
+$main-offset-desktop: 20px;
+
+$breakpoint-grid: 741px;
+
+$qualificationNumbers: 3; // Used for qualifications typing animation
+
+$yellow: #fdc50f;
+$orange: #fb982f;
+$black: #242D49;
+$gray : #6d758b;
+$white : #fff;
+$blue : #DDF8FE;
+$purple: #eed2ff;
+$lightYellow: #fffbef;
+
+$colors: (
+    // "yellow": #F5C32C,
+    "yellow": #fdc50f,
+    // "orange" : #FCA61F,
+    "orange" : #fb982f,
+    "black": #242D49,
+    "gray" : #788097,
+    "blue" : #DDF8FE,
+    "purple": #eed2ff,
+    "lightYellow": #fffbef,
+)

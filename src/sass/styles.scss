@@ -1,0 +1,41 @@
+@use "sass:map";
+
+@import "reset";
+@import "variables";
+@import "typography";
+@import "structure";
+
+@import "components/buttons";
+@import "components/links";
+@import "components/nav";
+@import "components/scroll";
+
+@import "blocks/header";
+@import "blocks/about";
+@import "blocks/resume";
+@import "blocks/skills";
+@import "blocks/portfolio";
+@import "blocks/contact";
+@import "blocks/footer";
+
+@import "layouts/project.scss";
+
+.icon {
+    display: inline-block;
+    // height: 3%;
+    width: 4.5%;
+    background-color: inherit;
+}
+
+hr.visual-aid {
+    position: fixed;
+    top: 20%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: red;
+    border: none;
+    width: 100%;
+    z-index: 999;
+    display: none;
+}

@@ -1,0 +1,15 @@
+{% set pictureURL = resume.profilePicture.data.attributes.url %}
+
+<img class="profile-picture" src="{{ env.CMS_URL }}{{ pictureURL }}" alt="">
+<div>
+    <h1>
+        <small>{{ resume.header.greeting }}</small><br>
+        {{ resume.header.name }}
+    </h1>
+    
+    <ul class="qualifications">
+        {% for qualification in resume.header.qualifications %}
+            <li>{{ qualification }}</li>
+        {% endfor %}
+    </ul>
+</div>

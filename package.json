@@ -1,0 +1,27 @@
+{
+  "name": "ivan-rodrigues-website",
+  "version": "1.0.0",
+  "description": "My personal website made with 11ty Static Site Generator",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run watch:eleventy\" \"npm run watch:sass\"",
+    "build": "npm run build:sass & npm run build:eleventy",
+    "watch:eleventy": "npx @11ty/eleventy --serve",
+    "watch:sass": "npx sass src/sass/styles.scss src/public/css/styles.css --watch",
+    "build:eleventy": "npx @11ty/eleventy",
+    "build:sass": "npx sass src/sass/styles.scss src/public/css/styles.css"
+  },
+  "author": "Ivan Rodrigues",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0",
+    "dotenv": "^16.0.0"
+  },
+  "dependencies": {
+    "concurrently": "^7.1.0",
+    "moment": "^2.29.2",
+    "node-fetch": "^2.6.7",
+    "sass": "^1.49.11",
+    "slugify": "^1.6.5"
+  }
+}

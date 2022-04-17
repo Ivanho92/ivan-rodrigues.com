@@ -1,0 +1,41 @@
+$scrollWidth: 16px;
+$scrollColor: $white;
+
+#scroll {
+    padding-top: 70px;
+    position: fixed;
+    right: 5px;
+    bottom: 0;
+}
+
+
+
+#scroll span {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    width: $scrollWidth;
+    height: $scrollWidth;
+    margin-left: -12px;
+    border-left: 1px solid $scrollColor;
+    border-bottom: 1px solid $scrollColor;
+    transform: rotateZ(-45deg);
+    animation: animate 2.5s infinite;
+    box-sizing: border-box;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotateZ(-45deg) translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotateZ(-45deg) translate(-20px, 20px);
+        opacity: 0;
+    }
+}
+
+// @media screen and (max-width: )

@@ -1,0 +1,51 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    color: map.get($colors, 'black');
+}
+
+.heading::after {
+    content: '';
+    border-bottom: 3px solid $yellow;
+    width: 40px;
+    display: block;
+}
+
+.heading {
+    margin: 0 0 1.5rem 0;
+    font-size: 2.4em;
+}
+
+.body p {
+    margin: 1em 0;
+}
+
+.body p:last-child {
+    margin-bottom: 0;
+}
+
+.body p:first-child {
+    margin-top: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li::before {
+    content: '\2022'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: $gray; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+.screen-reader {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    color: white;
+    background-color: black;
+    width: 0;
+    height: 0;
+}

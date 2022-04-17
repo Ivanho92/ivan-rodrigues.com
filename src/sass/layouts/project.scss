@@ -1,0 +1,52 @@
+.project-page {
+    padding: 1.5rem 0 0 0;
+
+    button {
+        margin-bottom: 1.5rem;
+    }
+
+    .project-title {
+        margin-bottom: 0.8em;
+        margin-top: 1em;
+        font-weight: bold;
+        font-size: 2em;
+    }
+
+    // .project-body {
+    //     padding-bottom: 2.2em;
+    // }
+
+    .project-body > * + * {
+        margin-top: 1.5rem;
+    }
+
+    .project-body ul > * + * {
+        margin-top: .3rem;
+    }
+
+    .project-body ul {
+        // margin: .5em 0;
+        margin-top: .7rem;
+    }
+
+    .project-body li {
+        // margin: .5em 0;
+        margin-left: 1rem;
+    }
+
+    .period {
+        margin: .5em 0;
+        margin-bottom: 1em;
+        color: $gray;
+
+        span {
+            color: $gray;
+        }
+    }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+    .project-page {
+        padding-top: 50px;
+    }
+}

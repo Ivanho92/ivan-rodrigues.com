@@ -1,0 +1,24 @@
+<div class="container">
+    <h2 class="heading">Portfolio</h2>
+    <div class="portfolio-projects">
+        {% for project in portfolio %}
+            {% set thumbnailURL = env.CMS_URL ~ project.thumbnail.data.attributes.formats.small.url if project.thumbnail.data.attributes.formats.small.url else undefined %}
+
+            <div class="portfolio-project">
+                    {% if thumbnailURL %}
+                    <img class="thumbnail" src="{{ thumbnailURL }}" alt="Link to portfolio's project '{{ project.title }}'">
+                    {% else %}
+                    <div class="thumbnail placeholder"></div>
+                    {% endif %}
+
+                    <div class="portfolio-project-body">
+                        <div>
+                            <p class="portfolio-project-title">{{ project.title }}</p>
+                            <p class="portfolio-project-description"> {{ project.description }}</p>
+                        </div>
+                        <a href="{{ project.url }}" target="_blank">Learn more</a>
+                    </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

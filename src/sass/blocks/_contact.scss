@@ -1,0 +1,39 @@
+#contact {
+    height: auto;
+
+    h2 {
+        text-align: left;
+        margin-bottom: 30px;
+    }
+
+    form {
+        text-align: left;
+    }
+
+    .form-row {
+        margin: 20px 0;
+    }
+
+    label {
+        display: block;
+    }
+
+    .optional {
+        font-size: 0.9em;
+        color: $gray;
+    }
+
+    input,
+    textarea {
+        margin: 2px 0;
+        padding: 10px 12px;
+        width: 100%;
+        background-color: lighten($gray, 45%);
+        border: none;
+        border-radius: 0;
+    }
+
+    ::placeholder {
+        color: lighten($gray, 15%);
+    }
+}
