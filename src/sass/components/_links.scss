@@ -5,7 +5,7 @@ a {
 }
 
 a:hover {
-    color: inherit;
+    color: $black;
     border-bottom: none;
     cursor: pointer;
 }
@@ -18,20 +18,24 @@ a:hover {
 //     vertical-align: text-top;
 // }
 
-a[target="_blank"]:after {
+a[target="_blank"]::after {
     background-color: $orange;
     -webkit-mask-image: url(/public/img/external-link-icon.svg);
     mask-image: url(/public/img/external-link-icon.svg);
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     // content: url(/img/external-link-icon.svg);
-    content: 'Opens link in a new window';
+    content: '';
     margin-left: 5px;
     font-size: .7em;
     vertical-align: text-top;
     display: inline-block;
     width: 10px;
     height: 12px;
+}
+
+a[target="_blank"]:hover::after {
+    background-color: $black;
 }
 
 // a[target="_blank"] {

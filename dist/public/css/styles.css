@@ -295,24 +295,28 @@ a {
 }
 
 a:hover {
-  color: inherit;
+  color: #242D49;
   border-bottom: none;
   cursor: pointer;
 }
 
-a[target=_blank]:after {
+a[target=_blank]::after {
   background-color: #fb982f;
   -webkit-mask-image: url(/public/img/external-link-icon.svg);
   mask-image: url(/public/img/external-link-icon.svg);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
-  content: "Opens link in a new window";
+  content: "";
   margin-left: 5px;
   font-size: 0.7em;
   vertical-align: text-top;
   display: inline-block;
   width: 10px;
   height: 12px;
+}
+
+a[target=_blank]:hover::after {
+  background-color: #242D49;
 }
 
 nav[role=navigation] {
