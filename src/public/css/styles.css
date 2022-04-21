@@ -583,13 +583,13 @@ header .qualifications {
   header .profile-picture {
     max-height: 120px;
     position: absolute;
-    top: -50%;
+    top: -80px;
     right: 0;
   }
 }
 @media screen and (max-width: 374px) {
   header .profile-picture {
-    top: -15%;
+    top: -35px;
   }
 }
 .qualifications {
