@@ -64,7 +64,7 @@ header {
         .profile-picture {
             max-height: 120px;
             position: absolute;
-            top: -80px;
+            top: -50%;
             right: 0;
         }
 
@@ -78,7 +78,7 @@ header {
 @media screen and (max-width:374px) {
     header {
         .profile-picture {
-            top: -35px;
+            top: -20%;
         }
     }
 
