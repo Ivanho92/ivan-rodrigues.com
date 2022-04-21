@@ -136,6 +136,10 @@ nav {
     section, header {
         scroll-margin-top: $scroll-offset-mobile;
     }
+
+    .container {
+        width: 92.5%;
+    }
 }
 
 @media screen and (max-width: 580px) {
