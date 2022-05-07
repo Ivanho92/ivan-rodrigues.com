@@ -587,11 +587,6 @@ header .qualifications {
     right: 0;
   }
 }
-@media screen and (max-width: 374px) {
-  header .profile-picture {
-    top: -20%;
-  }
-}
 .qualifications {
   display: grid;
   overflow: hidden;
@@ -860,27 +855,50 @@ section#about .facts > ul label {
 #portfolio .portfolio-projects {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: auto;
   column-gap: 30px;
   row-gap: 30px;
 }
 #portfolio .portfolio-project {
   outline: 1px solid #dee0e6;
   position: relative;
+  display: flex;
+  flex-direction: column;
   background-color: #fff;
 }
 #portfolio .portfolio-project-body {
+  row-gap: 0.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: space-between;
   padding: 0.9em;
-  min-height: 160px;
 }
-#portfolio .portfolio-project-body a {
-  position: absolute;
-  bottom: 15px;
+#portfolio .content > * + * {
+  margin-top: 0.8em;
+}
+#portfolio .content > ul {
+  margin-top: 0.2em;
+}
+#portfolio ul {
+  list-style-type: none;
+  margin-left: 1em;
+}
+#portfolio .content > ul > li + li {
+  margin-top: 0.3em;
+}
+#portfolio .content strong {
+  color: #6d758b;
+}
+#portfolio .project-link {
+  height: 1.5em;
 }
 #portfolio .portfolio-project-title {
   text-align: left;
   margin-top: 0.5em;
   font-weight: bold;
+  font-size: 1.35em;
+  line-height: 1.2;
 }
 #portfolio .portfolio-project-description {
   margin: 0.7em 0;
@@ -888,7 +906,8 @@ section#about .facts > ul label {
 #portfolio .thumbnail {
   background-color: #6d758b;
   width: 100%;
-  height: 45%;
+  height: 50%;
+  max-height: 10rem;
   object-fit: cover;
   object-position: center;
 }
@@ -900,9 +919,6 @@ section#about .facts > ul label {
   #portfolio .portfolio-projects {
     grid-template-columns: repeat(1, 1fr);
   }
-  #portfolio .thumbnail {
-    height: auto;
-  }
   #portfolio .portfolio-project-body {
     display: flex;
     flex-direction: column;
@@ -911,6 +927,9 @@ section#about .facts > ul label {
   }
   #portfolio .portfolio-project-body a {
     position: static;
+  }
+  #portfolio .thumbnail {
+    max-height: 15rem;
   }
 }
 #contact {

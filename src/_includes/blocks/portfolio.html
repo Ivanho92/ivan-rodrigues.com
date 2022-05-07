@@ -12,11 +12,11 @@
                     {% endif %}
 
                     <div class="portfolio-project-body">
-                        <div>
+                        <div class="content">
                             <p class="portfolio-project-title">{{ project.title }}</p>
-                            <p class="portfolio-project-description"> {{ project.description }}</p>
+                            <p class="portfolio-project-description"> {{ project.description | markdown | safe }}</p>
                         </div>
-                        <a href="{{ project.url }}" target="_blank">Learn more</a>
+                        <a class="project-link" href="{{ project.url }}" target="_blank">Learn more</a>
                     </div>
             </div>
         {% endfor %}
