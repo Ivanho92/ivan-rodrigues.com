@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 
 const getExperiences = async () => {
-    const data = await fetch(`${process.env.CMS_URL}/api/experiences?populate=*`);
+    const data = await fetch(`${process.env.CMS_URL}/api/experiences?populate=*&sort=startDate:desc`);
     const response = await data.json();
 
     const experiences = response.data.map(exp => {
