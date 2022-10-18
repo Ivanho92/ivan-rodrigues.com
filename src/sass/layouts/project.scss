@@ -1,4 +1,7 @@
 .project-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 1.5rem 0 0 0;
 
     button {
@@ -12,10 +15,6 @@
         font-size: 2em;
     }
 
-    // .project-body {
-    //     padding-bottom: 2.2em;
-    // }
-
     .project-body > * + * {
         margin-top: 1.5rem;
     }
@@ -25,12 +24,10 @@
     }
 
     .project-body ul {
-        // margin: .5em 0;
         margin-top: .7rem;
     }
 
     .project-body li {
-        // margin: .5em 0;
         margin-left: 1rem;
     }
 
@@ -47,6 +44,7 @@
 
 @media screen and (max-width: $breakpoint-mobile) {
     .project-page {
+        height: 100vh;
         padding-top: 50px;
     }
 }

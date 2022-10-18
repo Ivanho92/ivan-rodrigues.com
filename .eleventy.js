@@ -45,11 +45,6 @@ module.exports = (config) => {
     config.addPassthroughCopy("./src/public/favicon.png");
     config.addPassthroughCopy("./src/public/img");
 
-    // Collections
-    // config.addCollection("projects", (collection) => {
-    //     return collection.getFilteredByGlob("./src/projects/*.md");
-    // });
-
     return {
         dataTemplateEngine: "njk",
         markdownTemplateEngine: "njk",

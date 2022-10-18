@@ -6,21 +6,15 @@ body {
     display: flex;
     justify-content: center;
     margin: 0 15px;
-    // overflow-y: hidden;
-    // padding-top: 20px;
     align-items: stretch;
     background-color: $black;
     column-gap: 1rem;
 }
 
 main {
-    // margin-top: 20px;
     margin-bottom: 20px;
-    // margin-left: 20px;
     max-width: 830px;
     flex: 0 0 75%;
-    // padding: $main-offset-desktop 0;
-    // max-height: 100vh;
     overflow-y: scroll;
     border: 1px solid lightgray;
     background-color: $white;
@@ -49,7 +43,6 @@ main {
 .container {
     width: 85%;
     margin: 0 auto;
-    // height: 100%;
     padding: 2em 0;
 }
 
@@ -65,10 +58,7 @@ body::-webkit-scrollbar, main::-webkit-scrollbar {
 
 section,
 footer{
-    // height: 500px;
-    // border-bottom: 1px solid lightgray;
     border-top: 1px solid lighten($gray, 40%);
-    // text-align: center;
     scroll-margin-top: $scroll-offset-desktop;
 }
 
@@ -96,7 +86,6 @@ nav {
 @media screen and (max-width: 1176px) {
     main {
         max-width: 63vw;
-        // width: 63vw;
     }
 }
 

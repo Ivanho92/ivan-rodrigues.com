@@ -1,6 +1,6 @@
 <div class="container">
     <h2 class="heading">Contact</h2>
-    <form id="contact-form" action="{{ env.FORMSPREE_ENDPOINT }}" method="POST">
+    <form id="contact-form" action="{{ process.env.FORMSPREE_ENDPOINT }}" method="POST">
         <div class="form-row">
             <label for="name">Name</label>
             <input
