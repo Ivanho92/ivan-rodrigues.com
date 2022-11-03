@@ -7,5 +7,5 @@ pagination:
 permalink: projects/{{ project.slug }}/
 ---
 {% block content %}
-  {{ project.description }}
+  {{ project.description | safe }}
 {% endblock %}
