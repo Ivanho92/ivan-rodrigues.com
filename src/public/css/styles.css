@@ -382,6 +382,9 @@ nav[role=navigation] .btn-container {
   display: flex;
   justify-content: flex-start;
 }
+nav[role=navigation] #download-cv::after {
+  content: none;
+}
 
 .hamburger-icon {
   display: flex;

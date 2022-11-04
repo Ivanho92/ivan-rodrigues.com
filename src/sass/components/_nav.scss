@@ -94,6 +94,10 @@ nav[role="navigation"] {
         display: flex;
         justify-content: flex-start;
     }
+
+    #download-cv::after {
+        content: none;
+    }
 }
 
 // nav.nav-mobile {
@@ -299,5 +303,6 @@ nav[role="navigation"] {
         #download-cv {
             display: none;
         }
+
     }
 }

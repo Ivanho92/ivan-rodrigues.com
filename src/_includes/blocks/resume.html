@@ -65,7 +65,7 @@
                             {% endif %}
                         </div>
                         <p class="position">{{ education.position }}</p>
-                        <p class="description">{{ education.description }}</p>
+                        <p class="description">{{ education.description | markdown | safe }}</p>
                     </div>
                 </div>
             {% endfor %}
