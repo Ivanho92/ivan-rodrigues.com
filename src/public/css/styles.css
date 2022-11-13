@@ -715,14 +715,20 @@ section#about .facts > ul label {
 #resume .experiences-section .description > * {
   margin: 1em 0;
 }
-#resume .experiences-section .projects-title {
+#resume .experiences-section .list-title {
   font-weight: bold;
-  margin-bottom: 0.8em;
+  margin-top: 1rem;
+  margin-bottom: 0.3em;
   color: #6d758b;
 }
-#resume .experiences-section li {
-  margin: 0.5em 0;
+#resume .experiences-section ul.items {
+  list-style-position: outside;
+}
+#resume .experiences-section ul.items > li {
   margin-left: 1em;
+}
+#resume .experiences-section ul.items > li + li {
+  margin-top: 0.3em;
 }
 #resume .experiences-section strong {
   color: #6d758b;
@@ -788,14 +794,16 @@ section#about .facts > ul label {
 }
 
 @media screen and (max-width: 908px) {
-  #resume .experiences-section, #resume .education-section {
+  #resume .experiences-section,
+#resume .education-section {
     justify-content: flex-start;
     row-gap: 15px;
   }
   #resume .experience {
     padding-left: 0;
   }
-  #resume .experience-body, #resume .education-body {
+  #resume .experience-body,
+#resume .education-body {
     flex: 1 1 85% !important;
   }
 }

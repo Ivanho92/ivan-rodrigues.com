@@ -6,9 +6,9 @@
                 <div class="experience">
                     <div class="experience-timeline">
                         <svg>
-                            <circle cx="20" cy="25" r="15" fill="transparent" />
-                            <line x1="20" y1="50" x2="20" y2="100%" />
-                        </svg> 
+                            <circle cx="20" cy="25" r="15" fill="transparent"/>
+                            <line x1="20" y1="50" x2="20" y2="100%"/>
+                        </svg>
                     </div>
                     <div class="experience-body">
                         <p class="employer">{{ experience.employer }}</p>
@@ -23,11 +23,22 @@
                         </div>
                         <div class="description">{{ experience.description | markdown | safe }}</div>
 
+                        {% if experience.tasks | length %}
+                            <p class="list-title">{{ experience.tasks.tasksTitle }}</p>
+                            <ul class="items">
+                                {% for item in experience.tasks.items %}
+                                    <li>{{ item.item }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+
                         {% if experience.projects | length %}
-                            <p class="projects-title">Projects</p>
-                            <ul class="projects">
+                            <p class="list-title">Projects</p>
+                            <ul class="items">
                                 {% for project in experience.projects %}
-                                    <li><a href="/projects/{{ project.slug }}">{{ project.title }}</a></li>
+                                    <li>
+                                        <a href="/projects/{{ project.slug }}">{{ project.title }}</a>
+                                    </li>
                                 {% endfor %}
                             </ul>
                         {% endif %}
@@ -46,9 +57,9 @@
                 <div class="education">
                     <div class="education-timeline">
                         <svg>
-                            <circle cx="20" cy="25" r="15" fill="transparent" />
-                            <line x1="20" y1="50" x2="20" y2="100%" />
-                        </svg> 
+                            <circle cx="20" cy="25" r="15" fill="transparent"/>
+                            <line x1="20" y1="50" x2="20" y2="100%"/>
+                        </svg>
                     </div>
                     <div class="education-body">
                         <p class="school">{{ education.school }}</p>

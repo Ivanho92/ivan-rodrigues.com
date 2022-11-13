@@ -1,24 +1,26 @@
 <nav role="navigation" aria-label="Website navigation menu">
     <ul class="menu-list">
-        <li class="top"><a onclick='scrollToTop();' href="/#" class="menu-el" {{ 'aria-current=page' if not page.fileSlug == 'project' else '' }}>Home</a></li>
-        <li class="about"><a href="/#about" class="menu-el">About</a></li>
-        <li class="resume"><a href="/#resume" class="menu-el" {{ 'aria-current=page' if page.fileSlug == 'project' else '' }}>Resume</a></li>
-        <li class="skills"><a href="/#skills" class="menu-el">Skills</a></li>
-        <li class="portfolio"><a href="/#portfolio" class="menu-el">Portfolio</a></li>
-        <li class="contact"><a href="/#contact" class="menu-el">Contact</a></li>
+        <li class="top">
+            <a onclick='scrollToTop();' href="/#" class="menu-el" {{ 'aria-current=page' if not page.fileSlug == 'project' else '' }}>Home</a>
+        </li>
+        <li class="about">
+            <a href="/#about" class="menu-el">About</a>
+        </li>
+        <li class="resume">
+            <a href="/#resume" class="menu-el" {{ 'aria-current=page' if page.fileSlug == 'project' else '' }}>Resume</a>
+        </li>
+        <li class="skills">
+            <a href="/#skills" class="menu-el">Skills</a>
+        </li>
+        <li class="portfolio">
+            <a href="/#portfolio" class="menu-el">Portfolio</a>
+        </li>
+        <li class="contact">
+            <a href="/#contact" class="menu-el">Contact</a>
+        </li>
     </ul>
-    <a id="download-cv" class="btn btn-primary" href="{{ resume.cv.data.attributes.url }}" download target="_blank">Download CV</a>
+    <a id="download-cv" class="btn btn-primary" href="{{ generateCV.cvLinks.pdfURL }}" download target="_blank">Download CV</a>
 </nav>
-{# <nav id="nav" class="nav nav-mobile">
-    <ul role="list" class="menu-list-mobile" id="menu-list" class="show">
-        <li class="top"><a href="/#top" class="menu-el">Home</a></li>
-        <li class="about"><a href="/#about" class="menu-el">About</a></li>
-        <li class="resume"><a href="/#resume" class="menu-el" {{ 'aria-current="page"' if page.fileSlug == 'project' else '' }}>Resume</a></li>
-        <li class="skills"><a href="/#skills" class="menu-el">Skills</a></li>
-        <li class="portfolio"><a href="/#portfolio" class="menu-el">Portfolio</a></li>
-        <li class="contact"><a href="/#contact" class="menu-el">Contact</a></li>
-    </ul>
-</nav> #}
 <div class="hamburger-container">
     <button aria-haspopup="true" class="hamburger" id="hamburger" aria-label="Open navigation menu">
         <i class="hamburger-icon">
