@@ -19,7 +19,11 @@
             <a href="/#contact" class="menu-el">Contact</a>
         </li>
     </ul>
-    <a id="download-cv" class="btn btn-primary" href="{{ generateCV.cvLinks.pdfURL }}" download target="_blank">Download CV</a>
+    <div class="download-cv-area">
+        <p class="download-cv-title heading">Download my CV</p>
+        <a class="btn btn-primary download-cv" href="{{ cv.links.pdf }}" target="_blank">PDF</a>
+        <a class="btn btn-secondary download-cv" href="{{ cv.links.docx }}" download target="_blank">DOCX</a>
+    </div>
 </nav>
 <div class="hamburger-container">
     <button aria-haspopup="true" class="hamburger" id="hamburger" aria-label="Open navigation menu">

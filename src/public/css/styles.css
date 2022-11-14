@@ -77,7 +77,7 @@ select {
 }
 * {
   font-family: Arial, Helvetica, sans-serif;
-  color: #242D49;
+  color: #242d49;
 }
 
 .heading::after {
@@ -142,7 +142,7 @@ body {
   justify-content: center;
   margin: 0 15px;
   align-items: stretch;
-  background-color: #242D49;
+  background-color: #242d49;
   column-gap: 1rem;
 }
 
@@ -162,7 +162,7 @@ main::before, main::after {
   right: 0;
   width: 100%;
   height: 20px;
-  background-color: #242D49;
+  background-color: #242d49;
   z-index: 2;
 }
 main::after {
@@ -274,22 +274,25 @@ nav {
 }
 
 .btn:focus {
-  outline: 2px solid #242D49;
+  outline: 2px solid #242d49;
 }
 
 .btn-primary {
-  background: #fb982f;
-  background: linear-gradient(180deg, #fdc50f 26%, #fca74d 100%);
+  background: #755fec;
   color: #fff !important;
-  outline: 1px solid #fdc50f;
-  box-shadow: 0px 0px 6px 3px rgba(251, 161, 40, 0.1);
-  transition: background-color 1s ease;
+  transition: background-color 0.1s ease-in-out;
 }
 
 .btn-primary:hover {
-  background: #fff;
-  outline: 1px solid #fcbd7a;
-  color: #fb982f !important;
+  background: #fb982f;
+}
+
+.btn-secondary {
+  transition: color 0.1s ease-in-out;
+}
+
+.btn-secondary:hover {
+  color: #fb982f;
 }
 
 a {
@@ -299,7 +302,7 @@ a {
 }
 
 a:hover {
-  color: #242D49;
+  color: #242d49;
   border-bottom: none;
   cursor: pointer;
 }
@@ -320,7 +323,7 @@ a[target=_blank]::after {
 }
 
 a[target=_blank]:hover::after {
-  background-color: #242D49;
+  background-color: #242d49;
 }
 
 nav[role=navigation] {
@@ -343,7 +346,7 @@ nav[role=navigation] a[aria-current=page]::before {
   position: absolute;
 }
 nav[role=navigation].nav-desktop a[aria-current=page] {
-  color: #242D49;
+  color: #242d49;
 }
 nav[role=navigation].nav-mobile a[aria-current=page] {
   color: #8c8c8c;
@@ -359,9 +362,8 @@ nav[role=navigation] ul {
   margin-bottom: 1.5rem;
 }
 nav[role=navigation] .btn {
-  margin-left: 35px;
   display: block;
-  width: fit-content;
+  text-align: center;
 }
 nav[role=navigation] li {
   padding: 5px 35px;
@@ -382,8 +384,33 @@ nav[role=navigation] .btn-container {
   display: flex;
   justify-content: flex-start;
 }
-nav[role=navigation] #download-cv::after {
-  content: none;
+nav[role=navigation] .download-cv-area {
+  padding-inline: 2.2rem;
+}
+nav[role=navigation] .download-cv-title {
+  font-weight: 700;
+  margin-block-start: 3rem;
+  margin-block-end: 0.7rem;
+  font-size: 1em;
+}
+nav[role=navigation] .btn.download-cv {
+  position: relative;
+}
+nav[role=navigation] .btn.download-cv::after {
+  position: absolute;
+  bottom: 17px;
+}
+nav[role=navigation] .btn-primary.download-cv::after {
+  background-color: #fff;
+}
+nav[role=navigation] .btn.download-cv.btn-secondary::after {
+  -webkit-mask-image: url(/public/img/download-icon.svg);
+  mask-image: url(/public/img/download-icon.svg);
+  background-color: #242d49;
+  transition: all 0.1s;
+}
+nav[role=navigation] .btn.download-cv.btn-secondary:hover::after {
+  background-color: #fb982f;
 }
 
 .hamburger-icon {
@@ -423,7 +450,7 @@ nav[role=navigation] #download-cv::after {
 }
 
 .hamburger-container.show {
-  background-color: #242D49;
+  background-color: #242d49;
   border-bottom: 1px solid #2c385a;
 }
 .hamburger-container.show .hamburger {
@@ -460,7 +487,7 @@ nav[role=navigation] #download-cv::after {
     top: 0;
     max-width: 100%;
     width: 100%;
-    background-color: #242D49;
+    background-color: #242d49;
     color: #fff;
     transition: none;
     transform: translateY(-500px);
@@ -477,7 +504,7 @@ nav[role=navigation] #download-cv::after {
   nav[role=navigation] ul {
     display: flex;
     flex-direction: column;
-    background-color: #242D49;
+    background-color: #242d49;
     margin-bottom: 0;
   }
   nav[role=navigation] li {
@@ -493,7 +520,7 @@ nav[role=navigation] #download-cv::after {
   nav[role=navigation] a[aria-current=page]::before {
     content: none;
   }
-  nav[role=navigation] #download-cv {
+  nav[role=navigation] .download-cv-area {
     display: none;
   }
 }
@@ -623,7 +650,7 @@ section#about {
   height: auto;
 }
 section#about p {
-  color: #242D49;
+  color: #242d49;
 }
 section#about h2 {
   text-align: left;
