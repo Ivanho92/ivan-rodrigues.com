@@ -104,9 +104,9 @@ const loadSkills = async () => {
   });
 
   return {
-    frontEndSkills: frontEndSkills.join(" ∙ "),
-    backEndSkills: backEndSkills.join(" ∙ "),
-    otherSkills: otherSkills.join(" ∙ "),
+    frontEndSkills: frontEndSkills.join(" • "),
+    backEndSkills: backEndSkills.join(" • "),
+    otherSkills: otherSkills.join(" • "),
   };
 };
 
